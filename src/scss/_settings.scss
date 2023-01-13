@@ -1,7 +1,51 @@
 html {
   box-sizing: border-box;
 }
+html,body {
+  scrollbar-color: var( --body-bg) var(--light-color); /* «цвет ползунка» «цвет полосы скроллбара» */
+  scrollbar-width: 15px;
+}
+/* полоса прокрутки (скроллбар) */
+::-webkit-scrollbar {
+  width: 15px; /* ширина для вертикального скролла */
+  height: 8px; /* высота для горизонтального скролла */
+  background-color: var(--light-color);
+}
 
+/* ползунок скроллбара */
+::-webkit-scrollbar-thumb {
+  background-color: var( --body-bg);
+  border-radius: 9em;
+  box-shadow: inset 1px 1px 10px #f3faf7;
+  cursor: pointer;
+  transition:  all .4s ease-in;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(6, 131, 148, 0.5);
+}
+
+/* Стрелки */
+
+::-webkit-scrollbar-button:vertical:start:decrement {
+  background: var( --body-bg);
+  background-color: #f6f8f4;
+}
+
+::-webkit-scrollbar-button:vertical:end:increment {
+  background:var( --body-bg);
+  background-color: #f6f8f4;
+}
+
+::-webkit-scrollbar-button:horizontal:start:decrement {
+  background:var( --body-bg);
+  background-color: #f6f8f4;
+}
+
+::-webkit-scrollbar-button:horizontal:end:increment {
+  background:var( --body-bg);
+  background-color: #f6f8f4;
+}
 *,
 *::before,
 *::after {
@@ -110,8 +154,37 @@ a {
 .title {
   font-size: var(--title-font);
   color: var(--title-color);
+  line-height: var(--line-height-title);
 }
 .text {
   font-size: var(--text-font);
   color: var(--text-color);
+}
+
+.page__body {
+  background-image: url('../img/snow.png'), url('../img/snow3.png'), url('../img/snow2.png');
+  animation: snow 20s linear infinite;
+  background-color: var(--body-bg);
+}
+@keyframes snow {
+      0% {
+        background-position: 0 0, 0 0, 0 0;
+    }
+    100% {
+        background-position: 500px 1000px, 400px 400px, 300px 300px;
+    }
+}
+
+.section {
+  background-image: url('../img/sectionbg.png');
+  @include bg-cover;
+  margin: 50px 0;
+  &__inner {
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   grid-template-rows: 1fr;
+   align-items: center;
+    gap: 10px;
+    min-height: 115vh;
+  }
 }

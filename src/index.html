@@ -7,8 +7,12 @@
   <div class="site-container">
     @include('partials/header.html')
     <main class="main">
-      <!-- @include('partials/promo.html') -->
+      @include('partials/promo.html')
       @include('partials/about.html')
+      @include('partials/services.html')
+      @include('partials/location.html')
+      @include('partials/section.html')
+      @include('partials/faq.html')
     </main>
 
     @include('partials/footer.html')
@@ -16,5 +20,6 @@
   </div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0/dist/smooth-scroll.polyfills.min.js"></script>
 <script  src="js/main.js"></script>
 </html>

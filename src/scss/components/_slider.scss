@@ -1,0 +1,36 @@
+.swiper {
+  width: 45vw;
+  height: 100vh;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: var(--text-font);
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper-button-next, .swiper-button-prev {
+  background-color: var(--overlay-color);
+  width: 30px;
+  height: 30px;
+  color: var(--accent-color);
+  transition: color .4s ease-in-out;
+  border-radius: 50%;
+  &:hover {
+    color: var(--accent-hover);
+  }
+  &::after {
+    font-size: 20px;
+  }
+}

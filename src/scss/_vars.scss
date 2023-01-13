@@ -12,16 +12,16 @@
   --body-bg: #82e1e4;
 
   --light-color: #fff;
-  --opacity--white: rgba(#fff, .7);
+  --opacity--white: rgba(255,255,255, .7);
 
   --accent-color:wheat;
   --accent-opacity:rgba(wheat, .7);
   --accent-hover: rgb(177, 127, 35);
 
-  --overlay-color:#000;
+  --overlay-color: rgba(0,0,0,.7);
   --text-color: gray;
-  --title-color: #000;
-
+  --title-color: rgb(0,0,0);
+  --footer-color: #212121;
 
   // Fonts
 
@@ -30,4 +30,5 @@
 
   // Sizes
   --line-height: 2rem;
+  --line-height-title: 1.1;
 }

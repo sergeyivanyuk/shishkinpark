@@ -1,0 +1,19 @@
+.services {
+  &__title {
+     text-align: end;
+  }
+  &__inner {
+    display: grid;
+    justify-content: space-evenly;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,minmax(150px, 170px));
+    gap: 10px;
+  }
+  &__item {
+    background-color: rgba(0,0,0,.7);
+    border-radius: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
