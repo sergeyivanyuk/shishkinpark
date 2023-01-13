@@ -1,0 +1,26 @@
+.header {
+  z-index: 10;
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 0;
+  padding: 10px;
+  background-color: var(--opacity--white);
+  &__inner {
+    width: 100%;
+    @include flex-v-center;
+    justify-content: space-between;
+  }
+  &__tel {
+    color: var(--accent-color);
+    font-size: var(--text-font);
+    font-weight: 700;
+    transition: color .4s ease-in;
+    &:hover {
+      color: var( --accent-hover);
+    }
+  }
+}
+.logo {
+  max-width: 72px;
+}

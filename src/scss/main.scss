@@ -1,0 +1,44 @@
+// базовые подключения
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "settings";
+
+
+// подключения компонентов страницы
+@import "./components/header";
+@import "./components/menu";
+@import "./components/promo";
+@import "./components/about";
+@import "./components/slider";
+
+
+.page__body {
+  background-image: url('../img/snow.png'), url('../img/snow3.png'), url('../img/snow2.png');
+  animation: snow 20s linear infinite;
+  background-color: var(--body-bg);
+}
+@keyframes snow {
+      0% {
+        background-position: 0 0, 0 0, 0 0;
+    }
+    100% {
+        background-position: 500px 1000px, 400px 400px, 300px 300px;
+    }
+}
+
+.section {
+  background-image: url('../img/sectionbg.png');
+  @include bg-cover;
+
+  &__inner {
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   grid-template-rows: 1fr;
+    gap: 10px;
+    height: 100vh;
+  }
+  &__text {
+
+  }
+}
